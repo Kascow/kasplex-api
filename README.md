@@ -158,10 +158,6 @@ const operationDetails = await kasplex.getOpDetails('operationIdHere');
 console.log(operationDetails);
 ```
 
-### Example Usage of Transform Method
-
-The `transform` method is called automatically when fetching token or operation details, so you generally do not need to call it directly.
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or create an issue to discuss any features or bugs.
