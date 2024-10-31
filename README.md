@@ -4,25 +4,24 @@ The Kasplex API Library is a TypeScript library for interacting with the Kasplex
 
 ## Table of Contents
 
-- Installation
-- Usage
-- Methods
-  - getTokenInfo
-  - getTokenList
-  - getTokenListOfAddress
-  - getTokenBalanceOfAddress
-  - getOpList
-  - getOpDetails
-- Transform Method
-- Contributing
-- License
+- [Installation](#installation)
+- [Usage](#usage)
+- [Methods](#methods)
+  - [getTokenInfo](#gettokeninfo)
+  - [getTokenList](#gettokenlist)
+  - [getTokenListOfAddress](#gettokenlistofaddress)
+  - [getTokenBalanceOfAddress](#gettokenbalanceofaddress)
+  - [getOpList](#getoplist)
+  - [getOpDetails](#getopdetails)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
 To install the Kasplex API Library, run:
 
 ```bash
-yarn add kasplex-api
+yarn add kasplex
 ```
 
 ## Usage
@@ -30,7 +29,7 @@ yarn add kasplex-api
 To use the library, import the `Kasplex` class into your TypeScript project and instantiate it with the desired network type (either `mainnet` or `testnet`).
 
 ```typescript
-import { Kasplex } from 'kasplex-api';
+import { Kasplex } from 'kasplex';
 
 const kasplex = new Kasplex('mainnet');
 ```
@@ -158,10 +157,6 @@ A promise that resolves to an object containing the operation details.
 const operationDetails = await kasplex.getOpDetails('operationIdHere');
 console.log(operationDetails);
 ```
-
-## Transform Method
-
-The `transform` method is a private method used internally to format and convert specific fields in the API responses. It processes various types of objects, ensuring that certain numeric fields are handled using the `Decimal.js` library for precision.
 
 ### Example Usage of Transform Method
 
