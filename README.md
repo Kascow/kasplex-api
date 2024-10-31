@@ -52,7 +52,35 @@ A promise that resolves to an object containing the token details.
 
 ```typescript
 const tokenInfo = await kasplex.getTokenInfo('KASCOW');
+
 console.log(tokenInfo);
+```
+
+All values that use decimals are auto transformed including the holders amount
+
+Output:
+```json
+{
+  "message": "successful",
+  "result": {
+    "tick": "KASCOW",
+    "max": 27000000000,
+    "lim": 12000,
+    "pre": 3500000000,
+    "to": "kaspa:qpgthce84ql2yljlz95c2cgqjl7f3s4k5xwt3svaad8glrjujjdvznqgsgfs7",
+    "dec": "8",
+    "minted": 3525752000,
+    "opScoreAdd": "920701630000",
+    "opScoreMod": "940039580002",
+    "state": "deployed",
+    "hashRev": "87f682324a07e17639808f7c5275fe220716ab6bea42c4eceb84d0776706d34f",
+    "mtsAdd": "1728379050363",
+    "holderTotal": "39",
+    "transferTotal": "64",
+    "mintTotal": "2146",
+    "holder": []
+  }
+}
 ```
 
 ### getTokenList(params?: { next?: string; prev?: string })
@@ -73,8 +101,36 @@ A promise that resolves to an object containing a list of tokens and pagination 
 
 ```typescript
 const tokenList = await kasplex.getTokenList();
+
 console.log(tokenList);
 ```
+
+Output:
+```json
+{
+  "message": "successful",
+  "result": [
+    {
+      "tick": "STICK",
+      "max": 1000000000,
+      "lim": 1000,
+      "pre": 0,
+      "to": "kaspa:qzy5hky57ay46a5fyy6x8dk24prah3xndnvwnndr8q9xn303r40zvrvhwt38n",
+      "dec": "8",
+      "minted": 1000000000,
+      "opScoreAdd": "938559700010",
+      "opScoreMod": "938605630084",
+      "state": "finished",
+      "hashRev": "7c4ae5b1705cc56d5ab223fc191380b4f57ab619375390d930f012f5f5ad6fc1",
+      "mtsAdd": "1730150794525"
+    },
+    ...
+  ],
+  "next": "938111120000",
+  "prev": "941145300005"
+}
+```
+
 
 ### getTokenListOfAddress(address: string, params?: { next?: string; prev?: string })
 
