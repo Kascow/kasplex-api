@@ -21,7 +21,7 @@ The Kasplex API Library is a TypeScript library for interacting with the Kasplex
 To install the Kasplex API Library, run:
 
 ```bash
-yarn add kasplex
+yarn add kasplex-api
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ yarn add kasplex
 To use the library, import the `Kasplex` class into your TypeScript project and instantiate it with the desired network type (either `mainnet` or `testnet`).
 
 ```typescript
-import { Kasplex } from 'kasplex';
+import { Kasplex } from 'kasplex-api';
 
 const kasplex = new Kasplex('mainnet');
 ```
