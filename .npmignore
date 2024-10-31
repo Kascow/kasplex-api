@@ -1,2 +1,11 @@
+# Ignore TypeScript source files
 *.ts
-!dist/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore the dist directory itself, but allow its contents
+dist/*
+# Allow the main JS file and all type definition files
+!dist/index.js
+!dist/types/**/*.d.ts
