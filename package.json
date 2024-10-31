@@ -1,6 +1,6 @@
 {
   "name": "kasplex-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library that uses the kasplex api",
   "homepage": "https://kascow.io",
   "repository": {
@@ -10,10 +10,12 @@
   "bugs": {
     "url": "https://github.com/kascow/kasplex/issues"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --detectOpenHandles --forceExit",
     "build": "tsc",
+    "prepare": "npm run build",
     "format": "prettier --write \"api/**/*.ts\" \"test/**/*.ts\""
   },
   "keywords": [
